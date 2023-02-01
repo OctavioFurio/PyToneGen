@@ -11,7 +11,9 @@ Segue diagrama de funcionamento do exemplo "Melody.py" disponibilizado)
 ```mermaid
 
 flowchart LR
-  Melody.py --RNG--> Frequência & Duração ---> Audio
+  Melody.py --RNG--> Frequência & Duração
+  Duração --> Audio
+  Frequência --> Tom --> Audio
   
   subgraph PyToneGen
   id1["Função Seno"] --Numpy--> Array --PyGame--> SineWave
